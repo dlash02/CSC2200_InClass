@@ -1,0 +1,13 @@
+include ./headerHW.pug
+h2=library
+p=description
+h2 Select a book
+br
+form(action="/showBook" method="POST")
+    select(name="bookId")
+      each book, index in books
+          option(value=book.id) #{book.title}
+
+    input( type="submit" class='btn btn-primary' value='Submit it')
+    br
+include ./footerHW.pug

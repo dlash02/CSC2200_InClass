@@ -1,0 +1,21 @@
+html
+    head
+        title My Pages
+        link( rel='stylesheet', href='css/main.css')
+    body
+        include ./header.pug
+        h3 Title: #{title}
+        span #{subTitle}
+        a(href="/about") go to about
+        img(src='img/homer.gif' height='100px' width='100px')
+        table(style='width:100%' border=1)
+            tr
+                th Id
+                th Name
+                th Age
+
+                tr
+                    td=r.id
+                    td=r.name
+                    td=r.age
+        include ./footer.pug

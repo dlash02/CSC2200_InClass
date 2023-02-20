@@ -1,0 +1,14 @@
+html
+    head
+        title Form Tester
+    body
+        form(action = "/posttest", method = "POST" )
+            div
+                label(for = "Name") Name:
+                input(name = "Name" value = "George")
+            br
+            div
+                label(for = "Rank") Rank:
+                input(name = "Rank" value = "General")
+            br
+            button(type = "submit") Send my greeting
