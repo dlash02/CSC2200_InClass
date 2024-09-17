@@ -1,0 +1,12 @@
+html {
+    font-size: 20px;
+    margin : 0px;
+    padding : 0px;
+    border: 0px;
+}
+header  {
+    background-color: #77D4FC;
+}
+#logo {
+    width: 125px;
+}

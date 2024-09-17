@@ -1,0 +1,35 @@
+html {
+    font-size : 20px;
+    /*margin: 0px;*/
+    padding: 0px;
+}
+div#box1 {
+        background-color: deeppink;
+        width: 60%;
+        font-size: 1.2rem;
+        border-top :  1px solid blue;
+        border-bottom :  4px solid blue;
+        /*padding: 10px 4px 5px 20px;*/
+        /*margin-left: 100px;*/
+        /*margin-top: 100px;*/
+        position: absolute;
+        top: 0px;
+        /*left: 0px*/
+}
+#box2 {
+    background-color: cornflowerblue;
+    /*margin-top: 50px;*/
+    width: 50%;
+    border:  1px solid black;
+    position: absolute;
+    top: 160px;
+    left: 0px;
+}
+#boxTitle {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#box2Content {
+    padding: 20px;
+}

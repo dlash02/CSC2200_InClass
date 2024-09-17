@@ -1,0 +1,69 @@
+html {
+    font-size: 24px;
+}
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li.navLi {
+    float : left;
+}
+a:link {
+    display: block;
+    width: 120px;
+    text-decoration: none;
+    background-color: yellow;
+    font-weight: bold;
+    color: #000000;
+    padding: 9px;
+    border: 1px solid black;
+    margin: 5px;
+}
+a:hover {
+    background-color: aqua;
+    text-transform: uppercase;
+}
+a:active {
+    background-color: red;
+}
+a:visited {
+    background-color: green;
+}
+.myBox {
+    background-color: darkkhaki;
+    width: 50%;
+    height: 120px;
+    border: 5px dotted crimson;
+    margin-left: 20px;
+    padding: 20px 0px 0px 10px;
+    /*padding: 20px 0px;*/
+    /*padding-left: 10px;*/
+    /*padding-top: 20px;*/
+}
+/*p {*/
+/*    font-size : 1.5rem;*/
+/*}*/
+/*div {*/
+/*    font-size : 40px;*/
+/*}*/
+/*#inside {*/
+/*    font-size : .5em;*/
+/*}*/
+/*.myLab1 {*/
+/*    font-size : 1rem;*/
+/*}*/
+/*div#blah {*/
+/*    font-size : 1rem;*/
+/*}*/
+/*div > p {*/
+/*    font-size : 1rem;*/
+/*}*/
+/*h1, h2, p {*/
+/*    font-size : 1rem;*/
+/*}*/
+
+
+
+
