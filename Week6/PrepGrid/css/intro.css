@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 30px;
+}
+.grid-container {
+    background-color: #eee;
+    max-width: 900px;
+    margin: 0 auto; /* centers: auto margin to keft and right */
+    display: grid;  /* grid container */
+    grid-template-columns: repeat( 6, 1fr );
+    grid-template-rows: 100px 200px 300px;
+    gap: 10px;
+    justify-items: stretch ; /* This is default */
+    align-items: stretch; /* The dfault */
+}
+.grid-container > div {
+    background-color: #ccc;
+    text-align: center;
+    border: 1px solid #00ABE4;
+    padding: 20px;
+}
+.grid-container > div:nth-child(1){
+    background-color: red;
+    grid-column: 1 / span 2; /* span 2 cols in width */
+}
+.grid-container > div:nth-child(2){
+    background-color: orange;
+    grid-column: span 3; /* span 3 from next avail pos*/
+}
+.grid-container > div:nth-child(3){
+    background-color: orangered;
+    grid-column: span 1; /* span 1 is default - Nothing diff*/
+}
+.grid-container > div:nth-child(4){
+    background-color: darkorange;
+    grid-column: 2 /6;
+}
+.grid-container > div:nth-child(5){
+    background-color: yellow;
+    grid-column: 3; /* start a 3rd grid lines */
+    justify-self: start;
+    align-self: start;
+}
+.grid-container > div:nth-child(6){
+    background-color: lightyellow;
+    grid-column: span 4; /* span 3 grid lines */
+}

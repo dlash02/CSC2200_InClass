@@ -32,6 +32,16 @@
         background: aqua;
       }
       /* Add your flexbox CSS below here */
+      section {
+        display: flex;
+        flex-direction: row;
+      }
+      @media screen and ( max-width: 800px){
+        section {
+          flex-direction: column;
+          background-color: yellow;
+        }
+      }
     </style>
   </head>
   <body>

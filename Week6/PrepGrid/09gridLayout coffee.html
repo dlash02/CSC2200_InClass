@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<title>Example</title>
+<style>
+    body {
+        display: grid;
+        grid-template-areas:
+                "header header header"
+                "nav article ads"
+                "footer footer footer";
+        grid-template-rows: 20% 1fr 60px;
+        grid-template-columns: 20% 1fr 1fr;
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 0;
+    }
+    header, footer, article, nav, div {
+        padding: 20px;
+        background: gold;
+    }
+    #pageHeader {
+        grid-area: header;
+    }
+    #pageFooter {
+        grid-area: footer;
+    }
+    #mainArticle {
+        grid-area: article;
+    }
+    #mainNav {
+        grid-area: nav;
+    }
+    #siteAds {
+        grid-area: ads;
+    }
+    #img1 {
+        float: left;
+        margin-right: 10px;
+    }
+    #logoTitle {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        color: blue;
+    }
+    #mainNav a:hover {
+        background-color: yellowgreen;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    #mainNav a:active {
+        text-decoration: none;
+    }
+    #mainNav a:visited {
+        text-decoration: none;
+    }
+    #mainNav a:link {
+        text-decoration: none;
+    }
+</style>
+<body>
+<header id="pageHeader">
+    <img id='img1' src="imgs/coffee.png" height="50px" width="50px">
+    <span id="logoTitle"> Al's Coffee</span>
+</header>
+<article id="mainArticle">
+    <span id="sp1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet esse
+        </span>
+    <img id='img1' src="imgs/coffee-logo2.jpg"  height="50px" width="50px">
+
+    incidunt laborum laudantium maxime nesciunt quae sint tempore ut, vel?
+    <br />
+    The best part of waking up ... is our coffee
+</article>
+<nav id="mainNav">
+    <span id="Navs"> Main Sites</span>
+    <a class="nav1" href="http://disney.com"> disney </a>
+    <br />
+    <br />
+    <a class="nav1" href="http://aurora.com"> aurora </a>
+    <br />
+    <br />
+    <a class="nav1" href="page2"> page2.html </a>
+</nav>
+<div id="siteAds">Ads</div>
+   <footer id="pageFooter">Footer</footer>
+</body>
+</html>
