@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="css/pwGenMain.css" />
+  <script>
+      function doPassword(){
+        const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const SYMB = "!@#$%^&*()";
+        const nChar = parseInt(document.getElementById("length").value);
+        if ( isNaN( nChar ) || nChar < 4 || nChar > 10 ){
+          let obj = document.getElementById("passwordOutput");
+          obj.innerHTML = `<span style=color:red> Illegal Input${nChar} </span>`
+        } else {
+          const useSymbols = document.getElementById("symbols").checked;
+          let characterSet = CHARS;
+          if ( useSymbols ){
+            characterSet += SYMB;
+          }
+          let passwd = "";
+          let ct = 0;
+          while ( ct++ < nChar ){
+          // for( let i = 0; i< nChar; i++){
+            const randIndex = Math.floor( Math.random() * characterSet.length);
+            passwd += characterSet[randIndex];
+            // ct = ct + 1;
+          }
+          // let obj = document.getElementById("passwordOutput");
+          // obj.textContent = passwd;
+           document.getElementById("passwordOutput").textContent
+                   = passwd;
+
+        }
+
+      }
+      function getRandom( size ) {
+        const randIndex = Math.floor( Math.random() * size );
+        return randIndex;
+      }
+      const getRandom2 = ( size ) => {
+        const randIndex = Math.floor( Math.random() * size );
+        return randIndex;
+      }
+      let x = getRandom2(12);
+  </script>
+</head>
+<!--<body onLoad="doPassWord()">-->
+<body>
+<div class="password-generator">
+  <h2>Password Generator</h2>
+
+  <label for="length">Password Length:</label>
+  <input type="number" id="length" min="4" value="8" required>
+
+  <div class="checkbox-group">
+    <input type="checkbox" id="symbols">
+    <label for="symbols">Include Symbols</label>
+  </div>
+
+  <button id="generatePassword" onClick="doPassword()">Generate Password</button>
+
+  <div class="password-output" id="passwordOutput">Your password will appear here</div>
+</div>
+
+
+</body>
+</html>

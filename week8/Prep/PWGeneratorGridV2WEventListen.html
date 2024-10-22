@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="css/pwGenMain.css" />
+</head>
+<!--<body onLoad="doPassWord()">-->
+<body>
+<div class="password-generator">
+  <h2>Password Generator</h2>
+
+  <label for="length">Password Length:</label>
+  <input type="number" id="length" min="4" value="8" required>
+
+  <div class="checkbox-group">
+    <input type="checkbox" id="symbols">
+    <label for="symbols">Include Symbols</label>
+  </div>
+
+  <button id="generatePassword">Generate Password</button>
+
+  <div class="password-output" id="passwordOutput">Your password will appear here</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const symbols = '!@#$%^&*()_+';
+
+    document.getElementById('generatePassword').addEventListener('click', () => {
+      const length = parseInt(document.getElementById('length').value);
+      const useSymbols = document.getElementById('symbols').checked;
+
+      let characterSet = chars;
+      if (useSymbols) {
+        characterSet += symbols;
+      }
+
+      let password = '';
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characterSet.length);
+        password += characterSet[randomIndex];
+      }
+
+      document.getElementById('passwordOutput').textContent = password;
+    });
+  });
+</script>
+</body>
+</html>
