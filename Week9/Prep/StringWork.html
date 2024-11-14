@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Counter</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    textarea { width: 100%; height: 100px; margin-bottom: 10px; }
+    button { padding: 10px; }
+    .result { margin-top: 20px; }
+  </style>
+
+</head>
+<body>
+
+<h1>Word Counter</h1>
+<textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+<div>
+  <label>
+    <input type="radio" name="countOption" value="all" checked> Count all words
+  </label>
+  <label>
+    <input type="radio" name="countOption" value="unique"> Count only unique words
+  </label>
+</div>
+
+<button onclick="countWords()">Count Words</button>
+
+<div class="result" id="result"></div>
+<script src="js/stringWork.js" > </script>
+</body>
+</html>

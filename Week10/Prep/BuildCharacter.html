@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game-container">
+  <h1>Adventure Game</h1>
+
+  <!-- Player Stats -->
+  <div class="player-stats">
+    <p>Health: <span id="health">100</span></p>
+    <p>Inventory: <span id="inventory">None</span></p>
+  </div>
+
+  <!-- Location Description -->
+  <div class="location">
+    <p id="location-description">You are in a mysterious place...</p>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="actions">
+    <button onclick="fight()">Fight</button>
+    <button onclick="moveTo('forest')">Go to Forest</button>
+    <button onclick="moveTo('cave')">Go to Cave</button>
+    <button onclick="resetGame()">Reset Game</button>
+  </div>
+
+  <!-- Game Log -->
+  <div class="game-log" id="game-log">
+    <p>Welcome to the Adventure Game!</p>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

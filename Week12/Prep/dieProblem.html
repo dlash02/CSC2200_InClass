@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Roll Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+<h1>Die Roll Game</h1>
+<button id="rollDie">Roll Die</button>
+<button id="resetGame">Reset Game</button>
+
+<div class="result" id="resultDisplay">Press "Roll Die" to start!</div>
+<div class="score" id="scoreDisplay">Wins: 0 | Losses: 0</div>
+
+<script>
+  let wins = 0;
+  let losses = 0;
+
+  document.getElementById('rollDie').addEventListener('click', function() {
+    const resultDisplay = document.getElementById('resultDisplay');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    const roll = Math.floor(Math.random() * 6) + 1;
+
+    if (roll === 6 ) {
+      resultDisplay.textContent = `You rolled a 6! You win!`;
+      resultDisplay.style.color = 'green';
+      wins++;
+    } else if (roll === 1) {
+      resultDisplay.textContent = `You rolled a 1. You lose.`;
+      resultDisplay.style.color = 'red';
+      losses++;
+    } else {
+      resultDisplay.textContent = `You rolled a ${roll}. Try again!`;
+      resultDisplay.style.color = 'black';
+    }
+
+    scoreDisplay.textContent = `Wins: ${wins} | Losses: ${losses}`;
+  });
+
+  document.getElementById('resetGame').addEventListener('click', function() {
+    const resultDisplay = document.getElementById('resultDisplay');
+    resultDisplay.textContent = 'Press "Roll Die" to start!';
+    resultDisplay.style.color = 'black';
+    wins = 0;
+    losses = 0;
+    document.getElementById('scoreDisplay').textContent = 'Wins: 0 | Losses: 0';
+  });
+</script>
+</body>
+</html>
+

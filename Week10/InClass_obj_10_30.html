@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            // This is an object literal
+            const person = {
+                name : "Jack",
+                interests : ['guitar', 'baseball', 'music'],
+                likeMusic  : function() {
+                    for ( let i=0; i<this.interests.length; i++){
+                        if (this.interests[i] === 'music' ) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            };
+            function superHero( name, power, damage ){
+                this.name = name;
+                this.power = power;
+                this.damage = damage;
+                this.damageMoreThan = function( d ){
+                    if ( this.damage > d){
+                        return true;
+                    }
+                    return false;
+                }
+            }
+
+            let b1 = document.getElementById("b1");
+            b1.addEventListener('click', () => {
+                let oStr = `name is ${person.name}`
+                oStr += `Interest1:${person.interests[0] }`
+                oStr += `Interest2:${person.interests[1] }`
+                person.interests = [];
+                oStr += `And Likes Music:${person.likeMusic()}`
+                document.getElementById("results").innerHTML = oStr;
+
+            });
+            document.getElementById("b2").addEventListener( 'click',
+               () => {
+                    // alert("Clicked B2");
+                   let hulk = new superHero( "hulk", "Smash", 1000 );
+                   let ironMan = new superHero( "ironMan", "Money", 500 );
+                   alert(`S1:${hulk.name} morethan 10 ${hulk.damageMoreThan(10)}`)
+                   alert(`s2:${ironMan.name} morethan 10 ${ironMan.damageMoreThan(10)}`)
+               })
+        }
+    </script>
+</head>
+<body>
+    <h2> Click to start </h2>
+    <button id="b1" type="button"> Click to Start</button>
+    <button id="b2" type="button"> Click to Start B2</button>
+    <div id="results">
+
+    </div>
+</body>
+</html>

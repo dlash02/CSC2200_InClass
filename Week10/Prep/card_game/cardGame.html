@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BlackJack Plus</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/9dbf1e34ab.js" crossorigin="anonymous"></script>
+  <script src="js/cards.js" ></script>
+  <link href="fonts/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
+</head>
+<body onLoad="resetGame()">
+<div id="grid-container">
+  <header>
+     <h2> BlackJack Plus</h2>
+    <img src="imgs/allSuites.png" height="40px" alt="All Suits" style="position: relative; top: -20px" />
+  </header>
+    <div class="Left">
+      <div id="Bet">
+        <h2> Place your bet.</h2>
+        <div id="uBalance"> </div>
+        Bet <input type="text" name="bet" id="uBet"/>
+        <button class="button" type="button" id='Bet1'  onClick="startGame();">Bet</button>
+        <div id="betMsg"></div>
+      </div>
+      <div id="Results"> User Results Area</div>
+      <div id="UserResults"> Results Area</div>
+    </div>
+
+  <div class="Center">
+    <div id="PlayerCards"> </div>
+    <div id="PlayerCardsButtons">
+      <button class="button button-user" id="Hit" onClick="doHit()"> Hit</button>
+      <button class="button button-user" id="Stick" onClick="doStick()"> Stick</button>
+    </div>
+    <div id="DealerCards"> </div>
+    <div id="DealerCardsButtons">
+      <button class="button button-user" id="DealerTurn" onClick="doDealerTurn()"> Dealer Play </button>
+    </div>
+  </div>
+
+</div>
+<footer>
+  Game by David Lash - 2023
+</footer>
+</body>
+</html>
